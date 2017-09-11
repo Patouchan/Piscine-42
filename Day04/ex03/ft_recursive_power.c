@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 23:11:11 by possen            #+#    #+#             */
-/*   Updated: 2017/09/11 14:11:13 by possen           ###   ########.fr       */
+/*   Created: 2017/09/10 19:20:46 by possen            #+#    #+#             */
+/*   Updated: 2017/09/11 14:11:00 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-int		ft_iterative_power(int nb, int power)
+int		ft_recursive_power(int nb, int power)
 {
-	int t;
-
-	t = nb;
-	{
-		if (nb < 0)
+	if ( nb <= 0) 
 		return (0);
-		if (power == 0)
-			return (1);
-		while (power > 1)
-		{
-		t = t * nb;
-			power--;
-		}
-		return(t);
-	}
+	if (power < 1)
+		return (1);
+	else
+		return (nb * ft_recursive_power(nb,power - 1));
 }
 
 int		main()
 {
 	int ret;
 
-	ret = ft_iterative_power(6, 8);
+	ret = ft_recursive_power(6, 8);
 	printf("%d", ret);
 	return (0);
 }
