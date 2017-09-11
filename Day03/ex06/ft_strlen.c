@@ -6,11 +6,11 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 00:51:05 by possen            #+#    #+#             */
-/*   Updated: 2017/09/06 22:07:27 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/11 20:38:21 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar(char c);
+void	ft_putchar(char c);
 
 int		ft_strlen(char *str)
 {

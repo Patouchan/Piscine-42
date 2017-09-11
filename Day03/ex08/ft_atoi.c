@@ -6,28 +6,25 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 22:18:46 by possen            #+#    #+#             */
-/*   Updated: 2017/09/07 18:24:45 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/11 20:49:03 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(char *str)
 {
-	int i;;
+	int i;
 	int b;
 	int c;
 
 	i = 0;
 	b = 0;
 	c = 0;
-	while (str[i]=='\v'|| str[i] =='\t'|| str[i] == '\f'||
+	while (str[i] == '\v' || str[i] == '\t' || str[i] == '\f' ||
 	str[i] == '\n' || str[i] == '\r' || str[i] == '.')
 		i++;
-	if(str[i] == '_')
+	if (str[i] == '_')
 		b = 1;
 	while (str[i] == '-' || str[i] == '+')
 		i++;
-
-	return(0);
+	return (0);
 }
-
-
