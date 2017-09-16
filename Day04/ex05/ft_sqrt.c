@@ -6,7 +6,7 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/11 16:34:26 by possen            #+#    #+#             */
-/*   Updated: 2017/09/11 18:55:59 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/16 22:25:14 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,19 @@ int		ft_sqrt(int nb)
 	{
 		t = c * c;
 		{
-		if (t == nb)
-		return (c);
+			if (t == nb)
+				return (c);
 		}
 		c++;
 	}
 	return (0);
 }
 
-int		main()
+int		main(void)
 {
 	int ret;
 
-	ret = ft_sqrt(9);
+	ret = ft_sqrt(8);
 	printf("%d", ret);
 	return (0);
 }

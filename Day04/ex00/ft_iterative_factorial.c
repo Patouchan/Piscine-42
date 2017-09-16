@@ -6,9 +6,10 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/07 18:42:17 by possen            #+#    #+#             */
-/*   Updated: 2017/09/08 16:41:31 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/16 21:31:41 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
 int		ft_iterative_factorial(int nb)
@@ -23,10 +24,10 @@ int		ft_iterative_factorial(int nb)
 		nb = nb * (i - 1);
 		i--;
 	}
-	return(nb);
+	return (nb);
 }
 
-int		main()
+int		main(void)
 {
 	int ret;
 

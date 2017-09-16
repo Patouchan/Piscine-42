@@ -6,7 +6,7 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/07 23:11:11 by possen            #+#    #+#             */
-/*   Updated: 2017/09/11 14:11:13 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/16 22:43:52 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,19 @@ int		ft_iterative_power(int nb, int power)
 	int t;
 
 	t = nb;
-	{
-		if (nb < 0)
+	if (nb < 0)
 		return (0);
-		if (power == 0)
-			return (1);
-		while (power > 1)
-		{
+	if (power == 0)
+		return (1);
+	while (power > 1)
+	{
 		t = t * nb;
-			power--;
-		}
-		return(t);
+		power--;
 	}
+	return (t);
 }
 
-int		main()
+int		main(void)
 {
 	int ret;
 

@@ -6,7 +6,7 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/07 20:52:02 by possen            #+#    #+#             */
-/*   Updated: 2017/09/08 14:32:44 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/16 21:42:16 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_recursive_factorial(int nb)
 	return (nb * ft_recursive_factorial(nb - 1));
 }
 
-int		 main()
+int		main(void)
 {
 	int ret;
 
