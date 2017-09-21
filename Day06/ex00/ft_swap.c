@@ -1,41 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 23:11:11 by possen            #+#    #+#             */
-/*   Updated: 2017/09/19 22:06:09 by possen           ###   ########.fr       */
+/*   Created: 2017/09/18 02:51:41 by possen            #+#    #+#             */
+/*   Updated: 2017/09/18 03:26:14 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		ft_iterative_power(int nb, int power)
+void	ft_swap(int *a, int *b)
 {
 	int t;
 
-	t = nb;
-	if (power == 1)
-		return (nb);
-	if (power == 0)
-		return (1);
-	if (power < 0)
-		return (0);
-	while (power > 1)
-	{
-		t = t * nb;
-		power--;
-	}
-	return (t);
-}
-
-int		main(void)
-{
-	int ret;
-
-	ret = ft_iterative_power(-2, 4);
-	printf("%d", ret);
-	return (0);
+	t = *a;
+	*a = *b;
+	*b = t;
 }

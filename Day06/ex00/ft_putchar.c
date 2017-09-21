@@ -1,41 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 23:11:11 by possen            #+#    #+#             */
-/*   Updated: 2017/09/19 22:06:09 by possen           ###   ########.fr       */
+/*   Created: 2017/09/18 02:41:37 by possen            #+#    #+#             */
+/*   Updated: 2017/09/21 05:00:22 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int		ft_iterative_power(int nb, int power)
+void	ft_putchar(char c)
 {
-	int t;
-
-	t = nb;
-	if (power == 1)
-		return (nb);
-	if (power == 0)
-		return (1);
-	if (power < 0)
-		return (0);
-	while (power > 1)
-	{
-		t = t * nb;
-		power--;
-	}
-	return (t);
-}
-
-int		main(void)
-{
-	int ret;
-
-	ret = ft_iterative_power(-2, 4);
-	printf("%d", ret);
-	return (0);
+	write(1, &c, 1);
 }

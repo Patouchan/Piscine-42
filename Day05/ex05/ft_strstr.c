@@ -6,11 +6,9 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 04:26:29 by possen            #+#    #+#             */
-/*   Updated: 2017/09/19 18:52:44 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/19 22:31:47 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int		ft_strlen(char *to_find)
 {
@@ -42,11 +40,5 @@ char	*ft_strstr(char *str, char *to_find)
 		j = 0;
 		i++;
 	}
-	return (0);
-}
-
-int		main(int argc, char **argv)
-{
-	printf("%s", ft_strstr(argv[1], argv[2]));
 	return (0);
 }

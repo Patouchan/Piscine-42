@@ -6,9 +6,11 @@
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 23:55:00 by possen            #+#    #+#             */
-/*   Updated: 2017/09/19 18:54:02 by possen           ###   ########.fr       */
+/*   Updated: 2017/09/20 00:15:30 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char		*ft_strcapitalize(char *str)
 {
@@ -28,7 +30,14 @@ char		*ft_strcapitalize(char *str)
 	{
 		if ((str[i] >= 32 && str[i] <= 47) && (str[i + 1] >= 97 &&
 			str[i + 1] <= 122))
-			i++;
+			str[i +1] -= 32;
+		i++;
 	}
 	return (str);
+}
+
+int		main(int argc, char **argv)
+{
+	printf("%s", ft_strcapitalize(argv[1]));
+	return (0);
 }

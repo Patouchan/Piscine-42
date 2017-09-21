@@ -1,41 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: possen <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/07 23:11:11 by possen            #+#    #+#             */
-/*   Updated: 2017/09/19 22:06:09 by possen           ###   ########.fr       */
+/*   Created: 2017/09/18 02:57:46 by possen            #+#    #+#             */
+/*   Updated: 2017/09/18 17:54:55 by possen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		ft_iterative_power(int nb, int power)
+int		ft_strcmp(char *s1, char *s2)
 {
-	int t;
+	int h;
 
-	t = nb;
-	if (power == 1)
-		return (nb);
-	if (power == 0)
-		return (1);
-	if (power < 0)
-		return (0);
-	while (power > 1)
-	{
-		t = t * nb;
-		power--;
-	}
-	return (t);
-}
-
-int		main(void)
-{
-	int ret;
-
-	ret = ft_iterative_power(-2, 4);
-	printf("%d", ret);
-	return (0);
+	h = 0;
+	while (s1[h] != '\0' && s2[h] != '\0' && s1[h] == s2[h])
+		h++;
+	return (s1[h] - s2[h]);
 }
